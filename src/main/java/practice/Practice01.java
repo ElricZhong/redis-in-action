@@ -53,6 +53,7 @@ public class Practice01 {
         conn.sadd(voted, user);
         conn.expire(voted, ONE_WEEK_IN_SECONDS);
 
+        // 练习：实现反对票的功能
         String upVoted = "voted:up:" + articleId;
         conn.sadd(upVoted, user);
 
@@ -77,6 +78,7 @@ public class Practice01 {
             return;
         }
 
+        // 练习：实现反对票的功能
         String up = "up:";
         String down = "down:";
         int score = VOTE_SCORE;
